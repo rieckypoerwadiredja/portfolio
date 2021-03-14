@@ -1,0 +1,813 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #35a22c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../image/j.jpg);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /*opacity awal 0,5*/
+  height: 100%;
+  width: 100%;
+}
+header nav.navbar {
+  z-index: 9999;
+}
+header .navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.4rem;
+}
+header .navbar-nav .nav-item {
+  margin-right: 0.5rem;
+}
+header .navbar-nav .nav-item .nav-link {
+  padding: 0.5rem;
+  color: #fff;
+  transition: 0.3s;
+}
+header .navbar .nav-item .nav-link:hover,
+header .navbar .nav-item.active .nav-link {
+  color: var(--primary-color);
+}
+header nav.navbar .navbar-toggler {
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 999;
+  outline: none;
+  background-color: var(--primary-color);
+}
+.dropdown .dropdown-menu a.nav-link {
+  color: #333;
+}
+header .header-content {
+  position: absolute;
+  z-index: 999;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header .header-content img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  pointer-events: none;
+  width: 150px; /*120px x 120px awalnya*/
+  height: 150px;
+}
+header .header-content .content {
+  margin-top: 20px;
+  color: #fff;
+}
+header .header-content .content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+header .header-content .content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.header-content .content p {
+  animation: type 5s steps(30) infinite;
+  overflow: hidden;
+  color: #ff5000;
+  white-space: nowrap;
+  font-family: consolas;
+  text-align: center;
+  border-right: 4px solid #ff5000;
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 35ch;
+  }
+}
+.about {
+  padding: 120px 0;
+}
+.about .content {
+  text-align: justify;
+}
+.about .content h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about .content p {
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.about .skills {
+  width: 100%;
+}
+.about .skills .singgle-skill {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 25px;
+}
+.about .skills .singgle-skill .custom-progress {
+  width: 100%;
+  background-color: #e9ecef;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 5px;
+  position: relative;
+}
+.about .skills .singgle-skill .custom-progress .load1 {
+  animation: load 3s normal forwards;
+}
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.about .skills .singgle-skill .custom-progress .load2 {
+  animation: load2 3s normal forwards;
+}
+@keyframes load2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.about .skills .singgle-skill .custom-progress .load3 {
+  animation: load3 3s normal forwards;
+}
+@keyframes load3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.about .skills .singgle-skill .custom-progress .load4 {
+  animation: load4 3s normal forwards;
+}
+@keyframes load4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.about .skills .singgle-skill span {
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  display: block;
+}
+.about .skills .singgle-skill .custom-progress .progress-bars {
+  height: 5px;
+  background-image: linear-gradient(to right, #35a22c 0%, #0ea8cf 100%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about .row .skills h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 20px 0;
+  display: block;
+  position: relative;
+}
+.about .row .skills h4 span {
+  padding: 0 10px;
+  color: #000;
+  font-weight: 700;
+  background-color: #fff;
+  z-index: 1;
+}
+.about .row .skills h4::after,
+.about .row .skills h4::before {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.service h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.service {
+  background-image: url(../image/service.jpg);
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+.service::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /*opacity awal 0.5*/
+  position: absolute;
+  z-index: 1;
+}
+.service .content {
+  color: #fff;
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+.service .content h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.service .content .singgle-service {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.service .singgle-service h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.service .singgle-service p {
+  font-size: 0.8rem;
+  color: #f1f1f1;
+}
+
+.service .singgle-service i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+.service .content .singgle-service:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.service .singgle-service * {
+  text-align: center;
+}
+.gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #111;
+  font-weight: 600;
+}
+.gallery p {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.gallery .image .imgbox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.gallery .image .imgbox img {
+  cursor: pointer;
+  border-radius: 5px;
+}
+.gallery .image .imgbox div {
+  position: relative;
+  overflow: hidden;
+}
+.gallery .image .imgbox div:hover img {
+  transform: scale(1.5);
+  transition: 1s;
+}
+.gallery .image .imgbox div::after {
+  transition: 1s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gallery .image .imgbox:hover div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.gallery .image .imgbox:hover .gallery1::before {
+  content: "My Gallery";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery2::before {
+  content: "Peralatan mumpuni";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery3::before {
+  content: "Open laptop";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery4::before {
+  content: "Keep learning !";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery5::before {
+  content: "Belajar membuka dunia";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery6::before {
+  content: "Bangun dan bergerak";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery7::before {
+  content: "Peralatan yang mumpuni";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.gallery .image .imgbox:hover .gallery8::before {
+  content: "Peualangan tiada henti";
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: consolas;
+}
+.life-history {
+  background-image: url(../image/toga.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+.life-history::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /*opacity awal 0.5*/
+  position: absolute;
+  z-index: 1;
+}
+
+.life-history .row .pengalaman {
+  border-bottom: 1px solid #fff;
+  margin: 35px 0;
+  position: relative;
+  z-index: 9099;
+}
+.life-history .row h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 9099;
+}
+.life-history .row .pengalaman h4 {
+  margin: 10px 0;
+  font-weight: 500;
+}
+.life-history .row .pengalaman p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 254, 254, 0.8);
+  font-weight: 400;
+}
+
+.life-history .row .pengalaman p span {
+  display: inline;
+  padding: 5px 15px;
+  border: 3px solid var(--primary-color);
+  font-size: 1rem;
+  color: #fff;
+}
+.testinomial .carousel-indicators {
+  bottom: -40px;
+}
+.testinomial .carousel-indicators li {
+  background-color: var(--primary-color);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.testinomial .testinomial-singgle {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+.testinomial h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.testinomial .carousel-item .row .testinomial-singgle h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.testinomial .carousel-item .row .testinomial-singgle p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+.testinomial .carousel-item .row .testinomial-singgle .text p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.testinomial .carousel-item .row .testinomial-singgle .imgBox img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #222;
+}
+footer .footer .footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+footer .footer .footer-social ul li {
+  margin-right: 0.5rem;
+  display: inline-block;
+  margin: 0.5rem;
+}
+footer .footer .footer-social ul li a {
+  color: #fff;
+  border: 1px solid;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+footer .footer .footer-social ul li a:hover {
+  color: var(--primary-color);
+}
+footer .footer .footer-social ul li a i {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+footer .footer .devender {
+  color: #fff;
+  text-align: center;
+
+  padding-top: 20px;
+  font-size: 0.8rem;
+  border-top: 1px solid #333;
+}
+footer .footer .devender .source {
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+}
+footer .footer .devender .source .source2 {
+  margin-top: -15px;
+}
+.contact {
+  background: url(../image/jumbotron.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.contact::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /*opacity awal 0.5*/
+  position: absolute;
+  z-index: 1;
+}
+.contact h2 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+.contact .container .form-group input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.contact .form-group input,
+.contact .form-group textarea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.contact .form-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #fff;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.contact .form-group .animasi-form:focus ~ label {
+  top: -12px;
+}
+.contact .container .form-contanct {
+  margin-top: 20px;
+}
+
+.contact .container .form-group textarea {
+  height: 100px;
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 5px;
+}
+.contact .container .btn {
+  border-radius: 20px;
+  padding: 8px 30px;
+  position: relative;
+  z-index: 5;
+  margin: 0 10px;
+  color: #fff;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: sandybrown;
+}
+.contact .container .btn1 {
+  border-radius: 20px;
+  padding: 4px 10px;
+  position: relative;
+  z-index: 5;
+  margin: 0 10px;
+  color: #fff;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: sandybrown;
+}
+.contact .container .alert {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+/* .contact .container .btn:hover {
+  border: 2px solid sandybrown;
+  background: none;
+  transition: 0.5s;
+} */
+.contact .container .row .content {
+  position: relative;
+  z-index: 2;
+}
+.contact .container .row .content ul li {
+  list-style: none;
+}
+.contact .container .row .content ul li a {
+  color: #000;
+}
+.contact .container .row .content ul li a i {
+  font-size: 1.8rem;
+  margin: 0 20px;
+}
+.contact .container .row .content ul li a:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+.contact .container .row .content ul .boxx {
+  background-color: #fff;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+@media (max-width: 992px) {
+  header .navbar .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .testinomial .carousel-item .row .testinomial-singgle {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .testinomial .carousel-item .row .testinomial-singgle .imgBox img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  footer .footer .devender {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .about .col-md-4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .about .content {
+    text-align: center;
+  }
+  .about .col-md-4 img {
+    width: 50%;
+    height: 85%; /*tadi ga ada*/
+  }
+  .about .content h2 {
+    font-size: 1.5rem;
+    margin-top: -50px; /*tadi ga ada*/
+  }
+  .testinomial .carousel-item .row .testinomial-singgle {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .testinomial .carousel-item .row .testinomial-singgle .imgBox img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .service .content .singgle-service {
+    margin-bottom: 20px;
+  }
+}
